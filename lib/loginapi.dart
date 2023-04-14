@@ -16,8 +16,20 @@ body: json.encode( {
 }));
   if (response.statusCode == 200) {
     // If the server did return a 200 OK response,
-   
+
+    //  final Map<String,dynamic> Userdata = json.decode(response.body);
+    //  for ( final data in Userdata.entries ){
+    //    print(data.accessToken);
+    //  }
      print('response: ${response.body}');
+     print("token");
+      var extractdata = json.decode(response.body);
+      String usertoken = extractdata['accessToken'];
+      int UserID = extractdata['userId'];
+      print("token of user is ${usertoken} ");
+      print("UserId of user is ${UserID} ");
+      
+    
     
     
   } else {

@@ -27,13 +27,7 @@ final _loginform=GlobalKey<FormState>();
           suffixIcon: Icon(Icons.verified)),
           controller: _usercontroller,
           validator: (value){
-        //      bool emailValid = RegExp(
-        //     r"^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)$")
-        // .hasMatch(value ?? '');
-        // if (!emailValid)
-        // {  return "enter valid emailid";
-        
-        // }
+      
             if(value==null ||value.isEmpty)
             {
               return "Enter name";
