@@ -13,11 +13,11 @@ class Clinicslist extends StatefulWidget {
 
 class _ClinicslistState extends State<Clinicslist> {
   @override
-  // void initState() {
-  //   // TODO: implement initState
-  //   Checkuseloggedin(context);
-  //   super.initState();
-  // }
+  void initState() {
+    // TODO: implement initState
+    Checkuseloggedin(context);
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: Colors.red,
@@ -32,11 +32,12 @@ class _ClinicslistState extends State<Clinicslist> {
 
 //https://mydoctor.so/server/clinic/list?page=0&size=10&patientApp=true
 
-// Future<void> Checkuseloggedin(context) async {
-//   var prefs = await SharedPreferences.getInstance();
-//   final usertoken = prefs.getString(USERTOKEN);
+Future<void> Checkuseloggedin(context) async {
+  var prefs = await SharedPreferences.getInstance();
+  final usertoken = prefs.getString(USERTOKEN);
 
-//    print("token of user is saved in shared preference and used here ${usertoken} ");
+   print("token of user is saved in shared preference and used here ${usertoken} ");
    
 
 
+}
