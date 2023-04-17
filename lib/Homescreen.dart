@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:task1/widgets/tabsscreen.dart';
 import './Registerscreen.dart';
 import 'Loginscreen.dart';
 import 'loginapi.dart';
@@ -15,6 +16,7 @@ final _loginform=GlobalKey<FormState>();
   Widget build(BuildContext context) {
     return Scaffold
     (appBar:AppBar(title:Text("My Doctor")) ,
+
     body:Container(
       padding: EdgeInsets.all(20),
       child: Form(
@@ -64,7 +66,7 @@ final _loginform=GlobalKey<FormState>();
           ),onPressed: () {
             if(_loginform.currentState!.validate())
             {
-               User(_usercontroller.text,_passwordcontroller.text,5);
+               User( context,_usercontroller.text,_passwordcontroller.text,5);
              
             }
             else{
