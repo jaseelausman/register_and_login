@@ -31,9 +31,17 @@ User( context,email, String password, int roleid) async {
     print("UserId of user is ${UserID} ");
 
     var prefs = await SharedPreferences.getInstance();
-    prefs.setString('USERTOKEN', usertoken);
+    
 
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+    if(prefs.getString('USERTOKEN')!=usertoken)
+    {
+
+         print(prefs.getString('USERTOKEN'));
+         prefs.setString('USERTOKEN', usertoken);
+    }
+             print(prefs.getString('USERTOKEN'));
+
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) {
       return Tabsscreen();
     }));
   } else {
